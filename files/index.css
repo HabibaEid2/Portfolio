@@ -98,7 +98,7 @@ nav .nav-connact span {
     font-size: 16px;
 }
 nav .nav-connact span::before {
-    content: "GitHub profile";
+    content: "GitHub Page";
     position: absolute;
     white-space: nowrap;
     width: 0;
