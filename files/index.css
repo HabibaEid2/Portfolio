@@ -125,7 +125,7 @@ nav .nav-connact button:hover::before , nav .nav-connact button:hover span::befo
 
 /* start section */
 .section {
-    background-image: url("imgs/portfolio-img.png");
+    background-image: url("../imgs/portfolio-img.png");
     object-fit: cover;
     color: white;
     background-origin:content-box ;
@@ -196,7 +196,7 @@ nav .nav-connact button:hover::before , nav .nav-connact button:hover span::befo
 
 /* start skills */
 .skills {
-    background-image: url(imgs/skills-img.png);
+    background-image: url(../imgs/skills-img.png);
     background-repeat: no-repeat;
     background-size: cover;
     padding: var(--padding);
@@ -236,7 +236,7 @@ nav .nav-connact button:hover::before , nav .nav-connact button:hover span::befo
     color: white;
     background-color: black;
     padding: var(--padding);
-    background-image: url(imgs/color-sharp2.png);
+    background-image: url(../imgs/color-sharp2.png);
     background-size: cover;
 }
 .projects .project .card {
