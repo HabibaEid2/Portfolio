@@ -1,0 +1,320 @@
+/* start components */
+:root {
+    --padding: 70px 0 ; 
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+body {
+    font-family: "Fredoka", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+.heading {
+    text-align: center;
+    font-size: 40px;
+    padding: 20px;
+    font-weight: bold;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+@media (max-width : 567px) {
+    .skills .container {
+        padding: 15px;
+    }
+}
+/* end components */
+
+/* start nav */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+nav ul.navbar-nav {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+nav .nav-connact {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+nav .nav-item {
+    display: flex;
+    align-items: center;
+}
+.icon {
+    position: relative;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    background-color: rgb(64, 60, 53);
+    color: white;
+    padding: 9px 0;
+    border-radius: 50%;
+}
+.icon i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    z-index: 1;
+}
+.icon::after {
+    content: "";
+    width: 0;
+    height: 0;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    transition: .4s;
+}
+.icon:hover i{
+    color: black;
+}
+.icon:hover::after {
+    width: 101%;
+    height: 101%;
+}
+nav .nav-connact button {
+    border: solid 1px black;
+    position: relative;
+    width: 130px;
+    height:60px;
+}
+nav .nav-connact span {
+    position: relative;
+    font-size: 16px;
+}
+nav .nav-connact span::before {
+    content: "Let's Connect";
+    position: absolute;
+    white-space: nowrap;
+    width: 0;
+    overflow: hidden;
+    transition: .4s;
+    font-size: inherit;
+    padding: 0;
+    color: white;
+}
+nav .nav-connact button::before {
+    content: "";
+    width: 0;
+    height: 100%;
+    background-color: #e2bf40;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: .5s;
+}
+nav .nav-connact button:hover::before , nav .nav-connact button:hover span::before {
+    width: 100%;
+}
+/* end headnaver */
+
+/* start section */
+.section {
+    background-image: url("./../imgs/portfolio-img.png");
+    object-fit: cover;
+    color: white;
+    background-origin:content-box ;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.section .definition .welcome {
+    padding: 10px;
+    font-size: 17px;
+    letter-spacing: 1px;
+    border: solid 1px white;
+    width: fit-content;
+    font-weight: bold;
+    margin: 32px 0;
+    background-image: linear-gradient(45deg, #b972c287, #2c0532ad);
+}
+.section .definition h1 {
+    font-size: 60px;
+}
+.section .definition h1 #jop {
+    color: #e2bf40;
+}
+.section .definition h1 .type {
+    width: 3px;
+    height: 59px;
+    background-color: white;
+    display: inline-block;
+    margin-bottom: -10px;
+    margin-left: 5px;
+    position: relative;
+    animation: moveTyping ease-in-out infinite .5s alternate 4.5s;
+}
+@keyframes moveTyping {
+    0% {
+        background-color: rgb(0, 0, 0);
+    }
+    100% {
+        background-color: white;
+    }
+}
+.section .definition p {
+    color: #c3c3c3;
+}
+.section .image {
+    min-width: 300px;
+    max-width: 600px;
+    margin: auto;
+}
+.section .image img{
+    width: 100%;
+    position: relative;
+    animation-name: section-img-moving;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-fill-mode: backwards;
+    animation-direction: alternate-reverse;
+}
+@keyframes section-img-moving {
+    0% {
+        top : -20px
+    }
+    100% {
+        top: 0;
+    }
+}
+/* end section */
+
+/* start skills */
+.skills {
+    background-image: url(./../imgs/skills-img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: var(--padding);
+}
+.skills .skills-content {
+    margin: auto;
+}
+.skills .container {
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+.skills .skill .precent img{
+    width: 100px;
+}
+.skills .skill .precent {
+    position: relative;
+}
+.skills .skill .precent span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    background-color: black;
+    font-size: 25px;
+}
+.skills .skill p {
+    margin-top: 20px;
+    color: #B8B8B8;
+}
+/* end skills */
+
+/* start projects */
+.projects {
+    text-align: center;
+    color: white;
+    background-color: black;
+    padding: var(--padding);
+    background-image: url(./../imgs/color-sharp2.png);
+    background-size: cover;
+}
+.projects .project .card {
+    width: fit-content;
+    margin: auto;
+    border-radius: 20px;
+    border: none;
+    position: relative;
+}
+.projects p {
+    padding: 10px 46px ; 
+    color: #B8B8B8;
+}
+.projects .projects-content {
+    justify-content: center;
+}
+.projects .project .card::before {
+    content: "";
+    width: 100%;
+    height: 0%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 20px;
+    transition: .2s;
+    background-image: linear-gradient(90deg , #e060e1c2 , #7a00ff6e);
+}
+.projects .project .card:hover::before {
+    height: 100%;
+}
+.projects .project .image {
+    width: 290px;
+    height: 222px;
+}
+.projects .project img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+.projects .project .project-content {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    transition: .4s;
+    opacity: 0;
+    color: white;
+}
+.projects .card:hover .project-content {
+    top: 50%;
+    opacity: 1;
+}
+.projects .project-content button {
+    background-color:rgb(52 40 84);
+}
+.projects .project .project-content h2 {
+    font-weight: bold;
+    font-size: 32px;
+}
+/* end projects */
+
+/* start footer */
+.footer {
+    line-height: 0;
+}
+.footer .top {
+    background-image: linear-gradient(45deg, #27152f, #ab4bc0e0);
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    padding: 10px;
+}
+.footer .bottom {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* end footer */
